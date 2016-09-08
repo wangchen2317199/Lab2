@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" >
+
+
+        function save() {
+
+            localStorage.setItem("name",document.getElementById("name").value);
+            msg.innerHTML ="Register successfully! Welcome:" + localStorage.getItem('name');
+
+        }
+
+    </script>
+
+    <title>register</title>
+
+</head>
+<body>
+
+
+<div id="login"><center>
+
+    <h2><span class="Loginsys"></span><center>Register</center></h2>
+
+
+    <div>
+        <center>
+
+            <p><label for="name">first name:</label>   <input type="name" id="name" value="" onblur="if(this.value=='')this.value='name'" onfocus="if(this.value=='name')this.value=''"></p>
+            <p><label for="password">Password:</label>      <input type="password" id="password" value="" onBlur="if(this.value=='')this.value='........'" onFocus="if(this.value=='........')this.value=''"></p>
+
+
+            <p><input type="button" value="Submit" onclick="save()">  <input type="Submit" value=" Back" onclick="location.href='Login.html'">
+            <div id="msg"></div>
+        </center>
+
+    </div>
+</center>
+</div>
+
+</body>
+
+</html>
